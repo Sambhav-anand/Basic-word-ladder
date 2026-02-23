@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>💻 Hacker Word Ladder</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Courier New', monospace;
+    }
+    .glow {
+      text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 15px #00ff00;
+    }
+    input::placeholder {
+      color: #33ff33;
+    }
+    ::selection {
+      background: #00ff00;
+      color: #000;
+    }
+  </style>
+</head>
+<body class="bg-black text-green-400 flex items-center justify-center min-h-screen px-4">
+
+  <div class="border border-green-500 p-6 rounded-xl w-full max-w-lg shadow-lg bg-black">
+    <h1 class="text-2xl md:text-3xl font-bold text-green-400 text-center mb-6">
+      🪜 HACK THE WORD LADDER
+    </h1>
+
+    <div class="flex flex-col gap-4">
+      <input id="start" maxlength="4" placeholder="> START WORD"
+        class="bg-black border border-green-400 text-green-300 placeholder-green-500 px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-green-400" />
+
+      <input id="end" maxlength="4" placeholder="> END WORD"
+        class="bg-black border border-green-400 text-green-300 placeholder-green-500 px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-green-400" />
+
+      <button onclick="solveLadder()"
+        class="bg-green-700 hover:bg-green-600 text-black font-bold py-2 px-4 rounded-md transition-all">
+        FIND PATH
+      </button>
+    </div>
+
+    <div id="result" class="mt-6 text-green-300 font-mono whitespace-pre-wrap text-left"></div>
+  </div>
+
+  <script src="words.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
